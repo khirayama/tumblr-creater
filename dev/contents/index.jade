@@ -1,0 +1,92 @@
+main.index
+  #main-visual
+    img(src='images/img_main_visual.jpg')
+  section#content
+    // -------------------------------------------------------------------------------
+    section
+      h2 #{TEXT.ABOUT}
+      .img-wrap
+        img(src="images/img_index_about.png")
+      p 瀬戸内海にある、生口島・高根島の様々な場所をつかった野外映画祭です。毎年会場を増やしながら、島と映画の魅力を伝えていきます。家族で楽しめる映画から、若手監督のガッツある最新映画まで。島も映画も満喫できる、まさに夏の映画祭です。
+    // -------------------------------------------------------------------------------
+    section
+      h2 #{TEXT.SCHEDULE}
+      .img-wrap
+        img(src="images/img_index_schedule.png")
+      p 今年の映画祭会場は、潮風が心地よい立地に建つ「広島県立瀬戸田高等学校」・夕日が沈むビーチを背にスクリーンに眺む「瀬戸田サンセットビーチ」で開催します。瀬戸内海を舞台にした映画を上映します。スケジュールをご確認の上、是非遊びにきて下さい。
+      ul
+        li
+          .img-wrap
+            img(src="images/img_index_schedule_01.png")
+          table
+            tr.date
+              td(colspan="2")
+                time(datetime="2015-08-21") 8月21日（金）
+            tr
+              th 会場
+              td : 広島県立瀬戸田高等学校
+                a(href="#") URL
+            tr
+              th
+              td （広島県尾道市瀬戸田町名荷 1110-2）
+            tr
+              th 入場料
+              td : 無料
+            tr
+              td(colspan="2") 開場 / 18:00 - 上映時間 / 18:15 -
+            tr
+              td(colspan="2") （※特別企画！若手映画監督作品）
+            tr
+              td(colspan="2")
+                a(href="#") 詳細はこちら
+        li
+          .img-wrap
+            img(src="images/img_index_schedule_02.png")
+          table
+            tr.date
+              td(colspan="2")
+                time(datetime="2015-08-22") 8月22日（土）
+                | ・
+                time(datetime="2015-08-23") 8月23日（日）
+            tr
+              th 会場
+              td : 瀬戸田サンセットビーチ
+                a(href="#") URL
+            tr
+              th
+              td （広島県尾道市瀬戸田町垂水 1506-15）
+            tr
+              th 入場料
+              td : 当日券 /￥1,200（前売り券 /￥1,000）
+            tr
+              td(colspan="2") 開場 / 18:30 - 上映時間 / 19:15 -
+            tr
+              td(colspan="2") （※上映前企画！若手ダンスパフォーマンス）
+            tr
+              td(colspan="2")
+                a(href="#") 詳細はこちら
+      p.download
+        a(href="#") PDFでチラシをダウンロード
+    // -------------------------------------------------------------------------------
+    section
+      h2 #{TEXT.BLOG}
+      .img-wrap
+        img(src="images/img_index_blog_coming_soon.png")
+      p 瀬戸田で過ごすおすすめスポットを「見る・食べる・泊まる」のキーワードでご紹介します。尾道ラーメンの食文化や耕三寺・島ごと美術館構想などの文化施設など、生口島・高根島に息づく生活風景そのものが、映画のワンシーンのように特別な時間を演出します。
+    // -------------------------------------------------------------------------------
+    section
+      h2 #{TEXT.ACCESS}
+      iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d219223.82022662033!2d133.10126976287927!3d34.26782360723557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1437285190888" height="300" frameborder="0" style="border:0" allowfullscreen)
+      ul
+        li [8月21日（金）の開場]
+        li 広島県立瀬戸田高等学校（広島県尾道市瀬戸田町名荷 1110-2）
+        li 【本州方面より】しまなみ海道「生口島北IC」より車で約7分
+        li 【四国方面より】しまなみ海道「生口島南IC」より車で約20分
+      ul
+        li [8月22日（土）・23日（日）の開場]
+        li 瀬戸田サンセットビーチ（広島県尾道市瀬戸田町垂水 1506-15）
+        li 【本州方面より】しまなみ海道「生口島北IC」より車で約15分
+        li 【四国方面より】しまなみ海道「生口島南IC」より車で約10分
+        li 駐車場100台（大型バス2台 / バイク12台）
+
+  include ../components/aside
