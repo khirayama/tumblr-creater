@@ -89,9 +89,15 @@ footer {
         width: 100%;
       }
       aside {
+        display: none;
         float: none;
         width: 100%;
       }
+    }
+  }
+  footer {
+    .footer-inner {
+      width: 100%;
     }
   }
 }
@@ -154,13 +160,13 @@ header {
         }
       }
       .link-youtube {
-        background-image: url(images/icon_sns_youtube.png);
+        background-image: url(http://khirayama.github.io/tumblr-creater/public/images/icon_sns_youtube.png);
       }
       .link-facebook {
-        background-image: url(images/icon_sns_facebook.png);
+        background-image: url(http://khirayama.github.io/tumblr-creater/public/images/icon_sns_facebook.png);
       }
       .link-twitter {
-        background-image: url(images/icon_sns_twitter.png);
+        background-image: url(http://khirayama.github.io/tumblr-creater/public/images/icon_sns_twitter.png);
       }
     }
   }
