@@ -172,25 +172,27 @@ header {
   }
 }
 nav {
-  li {
-    width: 25%;
-  }
+  padding: 0 30px;
   .nav-about {
+    width: 22%;
     img {
       width: 148px;
     }
   }
   .nav-schedule {
+    width: 20%;
     img {
       width: 148px;
     }
   }
   .nav-blog {
+    width: 36%;
     img {
       width: 265px;
     }
   }
   .nav-access {
+    width: 22%;
     img {
       width: 168px;
     }
