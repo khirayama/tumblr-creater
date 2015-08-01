@@ -268,17 +268,17 @@ nav {
         }
       }
     }
-    .download {
-      padding: 20px 0 0;
-      text-align: center;
-      a {
-        padding: 3px;
-        background-color: $color-main;
-        color: #fff;
-        text-decoration: none;
-        font-size: .9rem;
-      }
-
+  }
+  .download {
+    padding: 20px 0 0;
+    margin-bottom: 20px;
+    text-align: center;
+    a {
+      padding: 3px;
+      background-color: $color-main;
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
     }
   }
 }
@@ -336,6 +336,51 @@ footer {
   }
   h2 {
     text-decoration: underline;
+  }
+  .img-wrap {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  iframe {
+    width: 100%;
+  }
+}
+.schedule {
+  h2 {
+    text-decoration: underline;
+  }
+  .schedule-list {
+    padding-right: 30px;
+    li {
+      overflow: hidden;
+      margin-bottom: 20px;
+      .img-wrap {
+        float: left;
+        width: 40%;
+      }
+      .description-wrap {
+        float: right;
+        width: 55%;
+        h3 {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .main-list-item {
+      margin-bottom: 0;
+      .img-wrap {
+        width: 100%;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
   }
   .img-wrap {
     width: 100%;
