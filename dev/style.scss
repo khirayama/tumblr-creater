@@ -366,9 +366,14 @@ footer {
         width: 55%;
         h3 {
           margin: 0;
+          font-size: 1.5rem;
         }
         p {
           margin: 0;
+          &.date {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+          }
         }
       }
     }
