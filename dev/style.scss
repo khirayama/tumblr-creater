@@ -51,9 +51,9 @@ ul {
   }
   main {
     &:after {
-      content: '';
-      clear: both;
       display: block;
+      clear: both;
+      content: '';
     }
     #content {
       float: left;
@@ -68,14 +68,15 @@ ul {
 footer {
   width: 100%;
   .footer-inner {
-    width: $bp;
     margin: 0 auto;
+    width: $bp;
   }
 }
 @media all and (max-width: $bp) {
   #wrap {
     width: 100%;
     nav {
+      padding: 0;
       width: 100%;
       ul {
         li {
@@ -171,6 +172,40 @@ header {
     }
   }
 }
+@media all and (max-width: $bp) {
+  header {
+    > div {
+      clear: both;
+      text-align: center;
+    }
+    .logo {
+      width: 100%;
+      text-align: center;
+    }
+    .copy {
+      width: 100%;
+    }
+    .info {
+      clear: both;
+      width: 100%;
+      text-align: center;
+      > p {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      ul {
+        display: inline-block;
+        li {
+          display: inline-block;
+          margin-left: 19px;
+          a {
+            padding-left: 19px;
+          }
+        }
+      }
+    }
+  }
+}
 nav {
   padding: 0 30px;
   .nav-about {
@@ -209,9 +244,9 @@ nav {
       li {
         overflow: hidden;
         .img-wrap {
-          width: 45%;
           float: left;
           padding: 5px 40px 0 0;
+          width: 45%;
         }
         table {
           th {
@@ -220,10 +255,10 @@ nav {
           td {
             a {
               float: right;
-              text-decoration: none;
+              padding: 0 3px;
               background-color: $color-main;
               color: #fff;
-              padding: 0 3px;
+              text-decoration: none;
               font-size: .9rem;
             }
           }
@@ -234,13 +269,13 @@ nav {
       }
     }
     .download {
-      text-align: center;
       padding: 20px 0 0;
+      text-align: center;
       a {
-        text-decoration: none;
+        padding: 3px;
         background-color: $color-main;
         color: #fff;
-        padding: 3px;
+        text-decoration: none;
         font-size: .9rem;
       }
 
@@ -251,8 +286,8 @@ aside {
   .list-sns {
     padding-top: 30px;
     li {
-      width: 50%;
       float: left;
+      width: 50%;
       img {
         width: 100%;
         vertical-align: bottom;
@@ -266,9 +301,9 @@ aside {
 footer {
   background-color: $color-main;
   .footer-inner {
-    color: #fff;
     position: relative;
     height: 120px;
+    color: #fff;
   }
   .img-wrap {
     position: absolute;
