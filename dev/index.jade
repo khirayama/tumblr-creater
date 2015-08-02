@@ -16,7 +16,22 @@ html
       include components/nav
 
       // create contens here
+      // {block:IndexPage}
       include contents/index
+      // {/block:IndexPage}
+      // {block:TagPage} 
+      include contents/blog
+      // {/block:TagPage}
+      // {block:PermalinkPage}
+      include contents/post
+      // {/block:PermalinkPage}
     include components/footer
-    script
-      include script.js
+    script.
+      (function () {
+        var path = location.pathname;
+        switch (true) {
+          case (path.indexOf('/tagged/blog') !== -1):
+            document.querySelector('main.index').style.display = 'none';
+            break;
+        }
+      })();

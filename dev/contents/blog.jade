@@ -1,0 +1,16 @@
+main.blog
+  section#content
+    h2
+      img(src="http://khirayama.github.io/tumblr-creater/public/images/hdg_blog.png" alt="#{TEXT.BLOG}")
+    ul.posts.
+      {block:Posts}
+        {block:Text}
+          <li class="post text">
+            <a href="{Permalink}">
+              {block:Title}<h3>{Title}</h3>{/block:Title}
+              {Body}
+            </a>
+          </li>
+        {/block:Text}
+      {/block:Posts}
+  include ../components/aside

@@ -1,0 +1,8 @@
+main.post
+  section#content
+    section.post-content.
+      {block:Posts}
+        <a href="{Permalink}">{block:Title}<h2>{Title}</h2>{/block:Title}</a>
+        {Body}
+      {/block:Posts}
+  include ../components/aside
