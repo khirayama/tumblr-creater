@@ -31,8 +31,20 @@ html
       (function () {
         var path = location.pathname;
         switch (true) {
-          case (path.indexOf('/tagged/blog') !== -1):
+          case (path.indexOf('blog') !== -1):
             document.querySelector('main.index').style.display = 'none';
+            break;
+          case (path.indexOf('see') !== -1):
+            document.querySelector('main.index').style.display = 'none';
+            break;
+          case (path.indexOf('eat') !== -1):
+            document.querySelector('main.index').style.display = 'none';
+            break;
+          case (path.indexOf('stay') !== -1):
+            document.querySelector('main.index').style.display = 'none';
+            break;
+          case (path.indexOf('schedule') !== -1):
+            document.querySelector('main.blog').style.display = 'none';
             break;
         }
       })();

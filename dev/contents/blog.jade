@@ -2,6 +2,15 @@ main.blog
   section#content
     h2
       img(src="http://khirayama.github.io/tumblr-creater/public/images/hdg_blog.png" alt="#{TEXT.BLOG}")
+    ul.tag-list
+      li.all
+        a(href="/tagged/blog") 一覧
+      li.see
+        a(href="/tagged/see") 見る
+      li.eat
+        a(href="/tagged/eat") 食べる
+      li.stay
+        a(href="/tagged/stay") 泊まる
     ul.posts.
       {block:Posts}
         {block:Text}
