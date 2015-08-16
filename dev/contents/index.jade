@@ -77,8 +77,17 @@ main.index
     section#blog
       h2
         img(src="http://khirayama.github.io/tumblr-creater/public/images/hdg_blog.png" alt="#{TEXT.BLOG}")
-      .img-wrap
-        img(src="http://khirayama.github.io/tumblr-creater/public/images/img_index_blog_coming_soon.png")
+      ul.posts.
+        {block:Posts}
+          {block:Text}
+            <li class="post text">
+              <a href="/tagged/blog">
+                {block:Title}<h3 class="{TagsAsClasses}">{Title}</h3>{/block:Title}
+                {Body}
+              </a>
+            </li>
+          {/block:Text}
+        {/block:Posts}
       p 瀬戸田で過ごすおすすめスポットを「見る・食べる・泊まる」のキーワードでご紹介します。尾道ラーメンの食文化や耕三寺・島ごと美術館構想などの文化施設など、生口島・高根島に息づく生活風景そのものが、映画のワンシーンのように特別な時間を演出します。
     // -------------------------------------------------------------------------------
     section#access

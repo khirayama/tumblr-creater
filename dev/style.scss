@@ -57,11 +57,11 @@ ul {
     }
     #content {
       float: left;
-      width: 66%;
+      width: calc(100% - 341px);
     }
     aside {
       float: right;
-      width: 34%;
+      width: 340px;
     }
   }
 }
@@ -75,6 +75,7 @@ footer {
 @media all and (max-width: $bp) {
   #wrap {
     width: 100%;
+    overflow: hidden;
     nav {
       padding: 0;
       width: 100%;
@@ -174,6 +175,7 @@ header {
 }
 @media all and (max-width: $bp) {
   header {
+    padding: 0!important;
     > div {
       clear: both;
       text-align: center;
@@ -184,6 +186,25 @@ header {
     }
     .copy {
       width: 100%;
+      padding: 0 20px;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      p {
+        padding: 0 0 15px;
+      }
+      ul {
+        padding: 0;
+        display: inline-block;
+        li {
+          text-align: left;
+          a {
+            margin-left: 5px;
+            text-align: center;
+          }
+        }
+      }
     }
     .info {
       clear: both;
@@ -191,15 +212,15 @@ header {
       text-align: center;
       > p {
         display: inline-block;
-        margin-right: 10px;
       }
       ul {
         display: inline-block;
         li {
           display: inline-block;
-          margin-left: 19px;
+          margin: 0 10px;
           a {
             padding-left: 19px;
+            font-size: 10px;
           }
         }
       }
@@ -230,6 +251,35 @@ nav {
     width: 22%;
     img {
       width: 168px;
+    }
+  }
+}
+@media all and (max-width: $bp) {
+  nav {
+    overflow: hidden;
+    margin-top: 20px;
+    ul {
+      overflow: hidden;
+      li {
+        width: 100%!important;
+        text-align: center;
+        // a {
+        //   height: 30px;
+        //   line-height: 30px!important;
+        // }
+        // &.nav-about img {
+        //   width: 75px;
+        // }
+        // &.nav-schedule img {
+        //   width: 75px;
+        // }
+        // &.nav-blog img {
+        //   width: 136px;
+        // }
+        // &.nav-access img {
+        //   width: 88px;
+        // }
+      }
     }
   }
 }
@@ -324,6 +374,25 @@ footer {
     top: 10px;
     right: 50px;
   }
+  @media all and (max-width: $bp) {
+    & {
+      .footer-inner {
+        height: 190px;
+      }
+      .img-wrap {
+        left: 10px;
+      }
+      small {
+        width: 100%;
+        left: 0;
+        text-align: center;
+      }
+      ul {
+        width: 200px;
+        right: 10px;
+      }
+    }
+  }
 }
 
 // contents
@@ -344,8 +413,49 @@ footer {
       height: auto;
     }
   }
+  .posts {
+    padding: 0 0 10px;
+    .post {
+      display: none;
+      &:first-child {
+        display: block;
+      }
+    }
+  }
   iframe {
     width: 100%;
+  }
+  @media all and (max-width: $bp) {
+    & {
+      h2 {
+        padding: 20px 18px 0;
+      }
+      section {
+        padding: 0!important;
+        p {
+          padding: 10px 20px;
+        }
+      }
+      #schedule {
+        ul {
+          li {
+            .img-wrap {
+              width: 100%;
+              padding: 0 20px;
+              margin-bottom: 5px;
+            }
+            table {
+              margin: 0 auto 20px;
+            }
+          }
+        }
+      }
+      #access {
+        ul {
+          padding: 10px 20px;
+        }
+      }
+    }
   }
 }
 
@@ -413,34 +523,32 @@ footer {
   }
 }
 
-.blog {
-  .tag-list {
-    margin-bottom: 20px;
-    li {
-      display: inline-block;
-      cursor: pointer;
-      padding: 3px 10px;
-      margin-left: 5px;
-      a {
-        display: block;
+.tag-list {
+  margin-bottom: 20px;
+  li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 3px 10px;
+    margin-left: 5px;
+    a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      &:hover {
         text-decoration: none;
-        color: #fff;
-        &:hover {
-          text-decoration: none;
-        }
       }
-      &.all {
-        background-color: rgb(27, 39,78);
-      }
-      &.see {
-        background-color: rgb(227, 68, 30);
-      }
-      &.eat {
-        background-color: rgb(240, 235, 58);
-      }
-      &.stay {
-        background-color: rgb(29, 135, 59);
-      }
+    }
+    &.all {
+      background-color: rgb(27, 39,78);
+    }
+    &.see {
+      background-color: rgb(227, 68, 30);
+    }
+    &.eat {
+      background-color: rgb(240, 235, 58);
+    }
+    &.stay {
+      background-color: rgb(29, 135, 59);
     }
   }
 }
@@ -460,9 +568,34 @@ footer {
       top: 0;
       left: 0;
       z-index: 1;
-      padding: 10px;
+      padding: 0;
       color: #fff;
       text-decoration: none;
+      font-size: 20px;
+      line-height: 45px;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 80px;
+        height: 45px;
+        line-height: 45px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 16px;
+        vertical-align: top;
+      }
+      &.see:before {
+        content: '見る';
+        background-color: rgb(227, 68, 30);
+      }
+      &.eat:before {
+        content: '食べる';
+        background-color: rgb(240, 235, 58);
+      }
+      &.stay:before {
+        content: '泊まる';
+        background-color: rgb(29, 135, 59);
+      }
     }
     figure {
       position: absolute;
@@ -478,11 +611,9 @@ footer {
   }
   @media all and (max-width: $bp) {
     & {
+      padding: 0;
       h2 {
         padding: 0 30px;
-      }
-      .posts {
-        padding: 0 0 30px;
       }
     }
   }
@@ -498,6 +629,33 @@ footer {
       color: #333;
       text-decoration: none;
       font-size: 2rem;
+      line-height: 45px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 80px;
+        height: 45px;
+        line-height: 45px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 16px;
+        vertical-align: top;
+        color: #fff;
+      }
+      &.see:before {
+        content: '見る';
+        background-color: rgb(227, 68, 30);
+      }
+      &.eat:before {
+        content: '食べる';
+        background-color: rgb(240, 235, 58);
+      }
+      &.stay:before {
+        content: '泊まる';
+        background-color: rgb(29, 135, 59);
+      }
     }
   }
   figure {
@@ -505,12 +663,16 @@ footer {
     img {
       width: 100%;
       height: auto;
+      vertical-align: bottom;
     }
   }
   @media all and (max-width: $bp) {
     & {
       .post-content {
-        padding: 0 0 50px;
+        padding: 0 0 50px!important;
+        p {
+          padding: 10px 20px;
+        }
       }
     }
   }

@@ -1,8 +1,18 @@
 main.post
   section#content
-    section.post-content.
-      {block:Posts}
-        <a href="{Permalink}">{block:Title}<h2>{Title}</h2>{/block:Title}</a>
-        {Body}
-      {/block:Posts}
+    section.post-content
+      ul.tag-list
+        li.all
+          a(href="/tagged/blog") 一覧
+        li.see
+          a(href="/tagged/see") 見る
+        li.eat
+          a(href="/tagged/eat") 食べる
+        li.stay
+          a(href="/tagged/stay") 泊まる
+      span.
+        {block:Posts}
+          <a href="{Permalink}">{block:Title}<h2 class="{TagsAsClasses}">{Title}</h2>{/block:Title}</a>
+          {Body}
+        {/block:Posts}
   include ../components/aside
