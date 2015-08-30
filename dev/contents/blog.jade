@@ -11,6 +11,8 @@ main.blog
         a(href="/tagged/eat") 食べる
       li.stay
         a(href="/tagged/stay") 泊まる
+      li.goods
+        a(href="/tagged/goods") グッズ
     ul.posts.
       {block:Posts}
         {block:Text}
@@ -22,4 +24,16 @@ main.blog
           </li>
         {/block:Text}
       {/block:Posts}
+
+      {block:Pagination}
+        <div class="pagination">
+          {block:PreviousPage}
+              <a class="prev-page" href="{PreviousPage}">前へ</a>
+          {/block:PreviousPage}
+
+          {block:NextPage}
+            <a class="next-page" href="{NextPage}">次へ</a>
+          {/block:NextPage}
+        </div>
+      {/block:Pagination}
   include ../components/aside

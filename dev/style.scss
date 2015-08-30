@@ -550,6 +550,9 @@ footer {
     &.stay {
       background-color: rgb(29, 135, 59);
     }
+    &.goods {
+      background-color: rgb(116, 83, 153);
+    }
   }
 }
 .posts {
@@ -595,6 +598,10 @@ footer {
       &.stay:before {
         content: '泊まる';
         background-color: rgb(29, 135, 59);
+      }
+      &.goods:before {
+        content: 'グッズ';
+        background-color: rgb(116, 83, 153);
       }
     }
     figure {
@@ -656,6 +663,10 @@ footer {
         content: '泊まる';
         background-color: rgb(29, 135, 59);
       }
+      &.goods:before {
+        content: 'グッズ';
+        background-color: rgb(116, 83, 153);
+      }
     }
   }
   figure {
@@ -676,4 +687,21 @@ footer {
       }
     }
   }
+}
+
+.pagination {
+  overflow: hidden;
+}
+.next-page,
+.prev-page {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 0;
+  font-size: 16px;
+}
+.next-page {
+  float: right;
+}
+.prev-page {
+  float: left;
 }
